@@ -28,15 +28,14 @@ Route::middleware('api')->group(function () {
         Route::resource('/categories', CategorieController::class);
         
     });
-    Route::middleware('api')->group(function () {
+   Route::middleware('api')->group(function () {
 
-        Route::resource('/articles', ArticleController::class);
+       Route::resource('/articles', ArticleController::class);
         
     });
     Route::get('/listarticles/{idscat}', [ArticleController::class,'showArticlesBySCAT']); 
 
-    Route::get('/articles/art/articlespaginate', [ArticleController::class, 
-'articlesPaginate']);
+    Route::get('/articles/art/articlespaginate', [ArticleController::class, 'articlesPaginate']);
 
 
     
